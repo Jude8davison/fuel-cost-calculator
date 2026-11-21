@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fuel Cost Calculator</title>
+<style>
+body{font-family:Arial;background:#f0fdfa;padding:25px}
+main{max-width:450px;margin:auto;background:white;padding:30px;border-radius:15px}
+input{width:100%;padding:12px;margin:10px 0;box-sizing:border-box;border:1px solid #99f6e4;border-radius:8px}
+button{width:100%;background:#0d9488;color:white;padding:14px;border:0;border-radius:8px;cursor:pointer}
+#result{background:#ccfbf1;padding:20px;margin-top:20px;border-radius:10px;white-space:pre-line;line-height:2}
+</style>
+</head>
+<body>
+<main>
+<h1>Fuel Cost Calculator</h1>
+<p>Estimate fuel expenses for your next trip.</p>
+<label>Travel Distance (km)</label>
+<input id="distance" type="number" placeholder="Distance">
+<label>Fuel Efficiency (km/L)</label>
+<input id="mileage" type="number" step="any" placeholder="Mileage">
+<label>Fuel Price Per Liter</label>
+<input id="price" type="number" step="any" placeholder="Fuel price">
+<button onclick="calculate()">Calculate Cost</button>
+<div id="result">Result: --</div>
+</main>
+<script>
+function calculate(){
+ const d=Number(document.getElementById("distance").value);
+ const m=Number(document.getElementById("mileage").value);
+ const p=Number(document.getElementById("price").value);
+ const result=document.getElementById("result");
+ if(d<=0||m<=0||p<=0){
+  result.textContent="Enter valid trip information.";
+  return;
+ }
+ const fuel=d/m;
+ result.textContent="Fuel Required: "+fuel.toFixed(2)+" liters"+
+ "\nEstimated Cost: "+(fuel*p).toFixed(2);
+}
+</script>
+</body>
+</html>
