@@ -1,23 +1,27 @@
-# Fuel Cost Calculator
+## Fuel Cost Calculation Guide
 
-A tool for estimating travel fuel expenses.
+This application estimates fuel expenses
+for a planned journey.
 
-## Features
+### Required Inputs
 
 - Travel distance
-- Fuel consumption
-- Estimated fuel cost
+- Vehicle fuel consumption
+- Fuel price
 
-## How to Use
+### Calculation Results
 
-Enter distance, fuel efficiency and fuel price.
+- Estimated fuel required
+- Total estimated fuel cost
 
-## Technologies
+### How to Use
 
-- HTML
-- CSS
-- JavaScript
+1. Enter the travel distance.
+2. Enter fuel consumption.
+3. Enter the fuel price.
+4. Calculate the estimated cost.
 
-## Running Locally
+### Notes
 
-Open `index.html` in a modern web browser.
+Results depend on the accuracy
+of the entered information.
