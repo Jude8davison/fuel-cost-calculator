@@ -25,3 +25,12 @@ for a planned journey.
 
 Results depend on the accuracy
 of the entered information.
+## Manual Testing Checklist
+
+- [ ] Enter distance, efficiency and fuel price.
+- [ ] Verify fuel required equals distance divided by efficiency.
+- [ ] Reject zero fuel efficiency and invalid prices.
+
+### Test Notes
+
+Record the observed result and any reproducible issue after running the tests.
